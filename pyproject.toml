@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acid-base-equilibria"
+version = "0.1.0"
+description = "Exact pH and speciation of aqueous acid-base mixtures, titration curves and buffer capacity"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Luis Rodriguez" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+notebooks = ["matplotlib", "jupyter"]
+
+[tool.setuptools]
+packages = ["phcalc"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
